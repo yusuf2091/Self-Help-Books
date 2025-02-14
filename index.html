@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selp Help Books</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="bg-blue-600 text-white shadow-lg sticky top-0 z-50">
+    <div class="container flex justify-between items-center p-4 mx-auto">
+      <!-- Logo -->
+      <h1 class="text-3xl font-bold">Self-Help</h1>
+  
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="#home" class="hover:text-yellow-400">Home</a>
+        <a href="#Categories" class="hover:text-yellow-400">Categories</a>
+        <a href="#books" class="hover:text-yellow-400">All Books</a>
+        <a href="#events" class="hover:text-yellow-400">Events</a>
+        <a href="#quotes" class=" rounded text-yellow-400 hover:text-white font-bold">Daily Quotes</a>
+        <a href="#contact" class="hover:text-yellow-400">Contact Us</a>
+      </nav>
+  
+      <!-- Search Bar (Hidden on Mobile) -->
+      <!-- <form class="hidden md:flex items-center bg-white rounded-full px-4">
+        <input type="text" placeholder="Search books or quotes..." class="outline-none p-2 w-48 text-gray-800">
+        <button type="submit">
+          <i class="fa-solid fa-magnifying-glass text-blue-600"></i>
+        </button>
+      </form> -->
+  
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-white text-2xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  
+    <!-- Mobile Dropdown Menu -->
+    <nav id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-blue-700 text-white py-4 shadow-lg">
+      <ul class="flex flex-col space-y-3 text-center">
+        <li><a href="#home" class="block py-2 hover:bg-blue-500">Home</a></li>
+        <li><a href="#Categories" class="block py-2 hover:bg-blue-500">Categories</a></li>
+        <li><a href="#books" class="block py-2 hover:bg-blue-500">All Books</a></li>
+        <li><a href="#events" class="block py-2 hover:bg-blue-500">Events</a></li>
+        <li><a href="#quotes" class="block text-white py-2 font-bold">Daily Quotes</a></li>
+        <li><a href="#contact" class="block bg-yellow-400 text-blue-700 py-2 font-bold">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  
+  <!-- Hero Section -->
+  <section class="relative bg-cover bg-center h-[90vh] flex items-center justify-center text-center text-white" style="background-image: url('./images/shelf.jpg');" id="home">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 p-6">
+      <h1 class="text-5xl font-bold">Transform Your Life, One Book at a Time</h1>
+      <p class="text-lg mt-4 max-w-2xl mx-auto">
+        Discover powerful self-help books and daily quotes to inspire growth, motivation, and success.
+      </p>
+      <div class="mt-6 space-x-4">
+        <a href="#books" class="bg-yellow-400 text-blue-600 px-6 py-3 rounded-lg font-bold text-2xl">Explore Books</a>
+        <!-- <a href="#" class="bg-yellow-400 text-blue-800 px-6 py-3 rounded-lg font-bold">Get Today's Quote</a> -->
+      </div>
+    </div>
+  </section>
+
+  <section class="py-10 bg-gray-100" id="Categories">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-6 text-blue-700">📚 Explore Categories</h2>
+
+        <!-- Categories Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <!-- Category Cards -->
+            <div class="category-card bg-white p-6 shadow-md rounded-lg text-center flex flex-col items-center hover:bg-blue-600 hover:text-white transition duration-300 cursor-pointer" data-category="productivity">
+                <i class="fas fa-chart-line text-blue-500 text-4xl mb-3"></i>
+                <h3 class="text-lg font-semibold">Productivity</h3>
+            </div>
+
+            <div class="category-card bg-white p-6 shadow-md rounded-lg text-center flex flex-col items-center hover:bg-blue-600 hover:text-white transition duration-300 cursor-pointer" data-category="mindset">
+                <i class="fas fa-lightbulb text-yellow-500 text-4xl mb-3"></i>
+                <h3 class="text-lg font-semibold">Mindset & Motivation</h3>
+            </div>
+
+            <div class="category-card bg-white p-6 shadow-md rounded-lg text-center flex flex-col items-center hover:bg-blue-600 hover:text-white transition duration-300 cursor-pointer" data-category="finance">
+                <i class="fas fa-coins text-green-500 text-4xl mb-3"></i>
+                <h3 class="text-lg font-semibold">Finance & Wealth</h3>
+            </div>
+
+            <div class="category-card bg-white p-6 shadow-md rounded-lg text-center flex flex-col items-center hover:bg-blue-600 hover:text-white transition duration-300 cursor-pointer" data-category="personal-development">
+                <i class="fas fa-user-graduate text-red-500 text-4xl mb-3"></i>
+                <h3 class="text-lg font-semibold">Personal Development</h3>
+            </div>
+
+            <div class="category-card bg-white p-6 shadow-md rounded-lg text-center flex flex-col items-center hover:bg-blue-600 hover:text-white transition duration-300 cursor-pointer" data-category="relationships">
+                <i class="fas fa-heart text-pink-500 text-4xl mb-3"></i>
+                <h3 class="text-lg font-semibold">Relationships</h3>
+            </div>
+
+            <div class="category-card bg-white p-6 shadow-md rounded-lg text-center flex flex-col items-center hover:bg-blue-600 hover:text-white transition duration-300 cursor-pointer" data-category="spirituality">
+                <i class="fas fa-spa text-purple-500 text-4xl mb-3"></i>
+                <h3 class="text-lg font-semibold">Spirituality</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- All Books Section -->
+<section id="books" class="py-10 container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-6 text-blue-700">📖 All Books</h2>
+    <div id="books-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        <!-- Books will be dynamically added here -->
+    </div>
+
+    <!-- Load More Button -->
+    <div class="text-center mt-6">
+        <button id="load-more" class="px-6 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition duration-300">Load More</button>
+    </div>
+</section>
+
+<!-- All Books Section
+<section id="all-books" class="py-10 container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-6 text-blue-700">📖 All Books</h2>
+    <div id="books-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        <!-- Books will be dynamically added here
+    </div>
+</section> -->
+  
+  <section class="py-10 bg-gray-100 text-center" id="quotes">
+    <div class="container mx-auto">
+      <h2 class="text-2xl font-bold mb-4">🔥 Kanye West Daily Quote</h2>
+      <blockquote class="bg-white p-6 shadow-md rounded-lg">
+        <p id="quote-text" class="text-xl font-semibold italic">Loading...</p>
+        <p id="quote-author" class="mt-4 text-gray-600 font-medium"></p>
+      </blockquote>
+      <button id="new-quote" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition">
+        Get Another Quote 🎤
+      </button>
+    </div>
+  </section>
+
+  <section class="py-10 bg-white text-center" id="best">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-6">🚀 Best-Selling Self-Help Books</h2>
+
+        <!-- Carousel Container -->
+        <div class="relative overflow-hidden">
+            <div id="carousel" class="flex space-x-4 overflow-x-auto scrollbar-hide p-4 transition-transform duration-500">
+                <!-- Books will be dynamically inserted here -->
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button id="prevBtn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white p-2 rounded-full shadow-lg">
+                ◀
+            </button>
+            <button id="nextBtn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white p-2 rounded-full shadow-lg">
+                ▶
+            </button>
+        </div>
+    </div>
+</section>
+
+  
+  <!-- testimonial section
+  <section class="py-10 bg-gray-100">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">💬 What Our Readers Say</h2>
+  
+      <!-- Reviews Container
+      <div class="relative overflow-hidden">
+        <div id="reviews-carousel" class="flex space-x-6 overflow-x-auto scrollbar-hide p-4 transition-transform duration-500">
+          <!-- Reviews will be dynamically inserted here
+        </div>
+  
+        <!-- Navigation Buttons 
+        <button id="prevReviewBtn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white p-2 rounded-full shadow-lg">
+          ◀
+        </button>
+        <button id="nextReviewBtn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white p-2 rounded-full shadow-lg">
+          ▶
+        </button>
+      </div>
+    </div>
+  </section> -->
+  
+  <section class="py-10 px-2 bg-white" id="events">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">📅 Upcoming Events</h2>
+  
+      <!-- Events Container -->
+      <div id="events-container" class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
+        <!-- Events will be dynamically inserted here -->
+      </div>
+    </div>
+  </section>
+  
+  <section id="contact" class="py-10 bg-gray-100" id="contact">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-6">📩 Contact Us</h2>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- Contact Form -->
+        <div class="bg-white p-6 shadow-md rounded-lg">
+          <h3 class="text-xl font-semibold mb-4">Send Us a Message</h3>
+          <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="cc75d76f-408a-46d4-81e7-c7ae03ff1289">
+            <input type="text" placeholder="Your Name" class="w-full mb-3 p-2 border rounded-lg" required>
+            <input type="email" placeholder="Your Email" class="w-full mb-3 p-2 border rounded-lg" required>
+            <textarea placeholder="Your Message" class="w-full mb-3 p-2 border rounded-lg h-28" required></textarea>
+            <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 w-full">Send Message 🚀</button>
+          </form>
+        </div>
+  
+        <!-- Contact Info -->
+        <div class="bg-white p-6 shadow-md rounded-lg text-center space-y-3">
+          <h3 class="text-xl font-semibold mb-4">📍 Get in Touch</h3>
+          <p class="text-gray-600"><a href="mailto:yusufabubakar2091@gmail.com" class="text-green-700">📧 Email: yusufabubakar2091@gmail.com</a></p>
+          <p class="text-gray-600"><a href="tel: +234 81 2769 3437" class="text-green-700">📞 Phone: +234 81 2769 3437</a></p>
+          <p class="text-gray-600"><a href="#map" class="text-green-700">📍 Location: Kano, Nigeria</a></p>
+          <div class="flex justify-center gap-4 mt-4">
+            <a href="https://www.facebook.com/yusuf.sadiqgarko/"" class="text-blue-600 text-2xl"><i class="fab fa-facebook"></i></a>
+            <a href="https://x.com/YusufTechCraft" class="text-blue-400 text-2xl"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/yusuf2091" class="text-pink-500 text-2xl"><i class="fab fa-github"></i></a>
+            <a href="www.linkedin.com/in/yusuf-abubakar-140655334" class="text-blue-500 text-2xl"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+  
+        <!-- Map -->
+        <div class="bg-white p-6 shadow-md rounded-lg" id="map">
+          <h3 class="text-xl font-semibold mb-4">🌍 Our Location</h3>
+          <iframe class="w-full h-72 rounded-lg" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.597946144937!2d8.579747174288155!3d12.002297835389228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11ae83b567582657%3A0xf0b2115508f53f40!2sGidan%20Dallatu!5e0!3m2!1sen!2sng!4v1739282003377!5m2!1sen!2sng"
+            allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-white text-center py-6 mt-10">
+    <div class="container mx-auto">
+      <p class="text-sm">© 2025 self Help Books. All rights reserved.</p>
+      <div class="flex justify-center gap-6 mt-3">
+        <a href="#" class="hover:underline text-sm">Terms & Conditions</a>
+        <a href="#" class="hover:underline text-sm">Privacy Policy</a>
+      </div>
+      <div class="flex justify-center gap-4 mt-4">
+        <a href="https://www.facebook.com/yusuf.sadiqgarko/" class="text-blue-600 text-2xl"><i class="fab fa-facebook"></i></a>
+        <a href="https://x.com/YusufTechCraft" class="text-blue-400 text-2xl"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/yusuf2091" class="text-pink-500 text-2xl"><i class="fab fa-github"></i></a>
+        <a href="www.linkedin.com/in/yusuf-abubakar-140655334" class="text-blue-500 text-2xl"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+  
+  
+  <script src="script.js"></script>
+</body>
+</html>

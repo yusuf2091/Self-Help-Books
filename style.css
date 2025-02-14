@@ -1,0 +1,37 @@
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari */
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+/* best selling books */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari */
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* Hide scrollbar for IE, Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+/* testimonial section */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari */
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* Hide scrollbar for IE, Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+.star-rating {
+  color: #FFD700; /* Gold color for stars */
+}
+
+/* upcoming events */
+.event-card {
+  transition: transform 0.3s ease-in-out;
+}
+.event-card:hover {
+  transform: translateY(-5px);
+}
